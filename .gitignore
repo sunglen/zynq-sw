@@ -1,0 +1,33 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Eclipse files
+.project
+.cproject
+.pydevproject
+.settings/
+
+# build files
+*.d
+*.mod.c
+modules.order
+Module.symvers
+.*.ko.cmd
+.*.o.cmd
+.*.o.d
+*.pyc
+.tmp_versions/
+build/
+
+# tmp files
+.*.swp
+/tmp
+*~
+.#*
+*#
+.emacs.desktop*
+TAGS*~
+
