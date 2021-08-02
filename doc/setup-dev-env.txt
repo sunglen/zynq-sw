@@ -1,0 +1,252 @@
+setup develop environment for vitis ai
+---
+
+A. get Vitis-AI
+git clone https://github.com/Xilinx/Vitis-AI.git , or:
+git clone --recurse-submodules https://github.com/Xilinx/Vitis-AI
+it seems obtaining the same contents.
+
+cd Vitis-AI/
+
+B. if use docker in dev host (unnecessary at this moment)
+
+1. sudo apt install docker.io
+
+2. sudo docker pull xilinx/vitis-ai-cpu:latest
+
+if download failed, use ladder and try again.
+
+3. sudo ./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+4. run docker as non-root user
+(if /etc/group have no docker) sudo groupadd docker
+sudo usermod -aG docker $USER
+(run only at first time to join the group) newgrp docker 
+now:
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+5. build x86_64 objects (demo apps)
+
+C. if use cross compilation for ZCU104
+
+1. see ug1354-xilinx-ai-sdk.pdf (released on feb 3, 2021) or:
+https://www.xilinx.com/html_docs/vitis_ai/1_3/lib_install.html
+
+2. run sdk-2020.2.0.0.sh, install to /usr/local/zcu104sdk
+this sdk include all libraries to compile demos. skip to section 4.
+
+(note!) if install the following libraries, compiled demos do NOT work!
+3. install library to /usr/local/zcu104sdk/sysroots/aarch64-xilinx-linux
+to compile Vitis-AI/tools/Vitis-AI-Library, the latest library is needed.
+(should be omitted) install 1.3.0:
+tar -zxvf Downloads/vitis_ai_2020.2-r1.3.0.tar.gz -C /usr/local/zcu104sdk/sysroots/aarch64-xilinx-linux/
+(should be omitted) download and install the latest version: vitis_ai_2020.2-r1.3.2.tar.gz:
+https://www.xilinx.com/bin/public/openDownload?filename=vitis_ai_2020.2-r1.3.2.tar.gz
+tar -zxvf Downloads/vitis_ai_2020.2-r1.3.2.tar.gz -C /usr/local/zcu104sdk/sysroots/aarch64-xilinx-linux/
+
+4. set PATH and other environment variables before cross compilation
+. /usr/local/zcu104sdk/environment-setup-aarch64-xilinx-linux
+use env to check shell environment variables.
+
+5. To compile the library sample in the AI Library, take `hyzx_demo` as an example, execute:
+```
+cd ~/titan4_debug/zynq/vitisaidemo/hyzx_demo
+./build_74.sh
+./builddrm_73.sh
+```    
+compilation command which build_74.sh execute: 
+aarch64-xilinx-linux-g++ -march=armv8-a+crc -mtune=cortex-a72.cortex-a53 \
+--sysroot=/usr/local/zcu104sdk/sysroots/aarch64-xilinx-linux -std=c++17 -O2 \
+-o segs_and_lanedetect_detect_x segs_and_roadline_detect.cpp \
+-lopencv_core -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui \
+-lglog -lvitis_ai_library-multitask -lvitis_ai_library-lanedetect -lvitis_ai_library-ssd \
+-lvitis_ai_library-segmentation -lvitis_ai_library-yolov3 -lpthread
+
+6. To modify the library source code, view and modify them under `~/Vitis-AI/tools/Vitis-AI-Library`.
+        Before compiling the AI libraries, please modify the `build_dir_default` in cmake.sh. 
+        Execute the following command to build the libraries all at once.
+```
+cd ~/Vitis-AI/tools/Vitis-AI-Library
+./cmake.sh --clean2
+```
+"--clean" means discard current build dir and start a fresh build, it will take time.
+
+if set:
+build_dir_default=$HOME/titan4_debug/zynq/vitisaidemo/build/build.${target_info}/${project_name}
+then build dir will be:
+~/titan4_debug/zynq/vitisaidemo/build/build.linux.2020.2.aarch64.Debug/Vitis-AI-Library
+
+7. if run cmake.sh without "--build-only", after compilation, libraries will be installed to:
+~/petalinux_sdk/sysroots/aarch64-xilinx-linux/install/Debug/lib/
+the whole install/Debug dir can be deleted if not used.
+
+8. re-build libraries after do some modification to them:
+```
+cd ~/Vitis-AI/tools/Vitis-AI-Library
+./cmake.sh --build-only
+```
+or, change dir to build dir:
+cd ~/titan4_debug/zynq/vitisaidemo/build/build.linux.2020.2.aarch64.Debug/Vitis-AI-Library
+make
+
+9. re-build one library: (i.e. after modify source code of multitask)
+cd ~/titan4_debug/zynq/vitisaidemo/build/build.linux.2020.2.aarch64.Debug/Vitis-AI-Library/multitask
+make
+
+10. disable screen saver on ZCU104 to avoid not-resume-display-error of drm program 
+run "xset s off -dpms" before starting demo program.
+
+D. for platform other than zcu-102/104 (i.e ALINX AXU3EG base board (ACU3EG core board), XCZU3EG-1SFVC784I chip)
+
+1. reference
+UG1414 (v1.3) February 3, 2021 (P33, Setting Up the Custom Board)
+https://github.com/Xilinx/Vitis_Embedded_Platform_Source
+https://github.com/Xilinx/Vitis-Tutorials/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/step2.md
+
+2. install petalinux
+- install gcc-multilib (will un-install gcc-aarch64-linux-gnu and g++-aarch64-linux-gnu automaticly)
+- install petalinux to ~/petalinux
+(note) if install to /opt/petalinux, petalinux-config will cause error.
+
+3. install custom platform
+
+3.1
+. Xilinx/Vitis/2021.1/settings64.sh
+. petalinux/settings.sh
+
+3.2
+petalinux-create --type project --template zynqMP --name axu3eg_custom_plnx
+cd axu3eg_custom_plnx/
+
+3.3 
+run petalinux-config for configuration as the document said:
+https://github.com/Xilinx/Vitis-Tutorials/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/step2.md
+petalinux-config --get-hw-description=../design_1_wrapper_1/hw/
+(note!) if set MACHINE_NAME to zcu102-rev1.0, zcu102-rev1.0.dtsi will be included to system-top.dts.
+however, zcu102-rev1.0.dtsi has settings dedicated for zcu102 MIO (why this dtsi includes IMO settings?),
+such as uart0 and gem3, which MIO settings is different from axu3eg board.
+therefore, keep MACHINE_NAME to template, do not change it to zcu102-rev1.0, otherwise, uart0 and other i/f will not work,
+for example, getty will not start.
+DTG Settings --> (template) MACHINE_NAME --> (keep it to template)
+Yocto Setting --> YOCTO_MACHINE_NAME --> zcu102-zynqmp (or keep it as zynqmp-generic)
+set root to mmcblk1p2
+enable EXT4 for root fs
+enable packagegroup-petalinux-opencv
+enable libmali-xlnx, hicolor-icon-theme, hdmi-module
+
+3.4
+petalinux-config -c rootfs
+(note!) if add CONFIG_packagegroup-petalinux-xrt and CONFIG_packagegroup-petalinux-vitisai to user-rootfsconfig file,
+build will fail, so those configs have to be removed.
+
+3.5
+petalinux-config -c kernel
+
+3.6
+edit project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi to enable EXT4 root fs and boot from root=/dev/mmcblk1p2:
+```   
+/include/ "system-conf.dtsi"
+/ {
+    chosen {
+    	bootargs = "earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk1p2 rw rootwait cma=512M";
+    };
+};
+
+/* SD */
+&sdhci1 {
+	disable-wp;
+	no-1-8-v;
+};
+
+/* USB */
+&dwc3_0 {
+	status = "okay";
+	dr_mode = "host";
+};
+```   
+
+3.7
+petalinux-build
+
+3.8
+cd images/linux/
+petalinux-package --boot --fsbl zynqmp_fsbl.elf --u-boot u-boot.elf --pmufw pmufw.elf --fpga system.bit --atf bl31.elf --force
+
+4. make SD card
+
+5. set boot mode to SW1[0..3] to 0101 on axu3eg board.
+
+6. boot from SD card
+bootargs can be specified by:
+ZynqMP> setenv bootargs "earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk1p2 rw rootwait cma=512M"
+ZynqMP> printenv bootargs
+bootargs=earlycon console=ttyPS0,115200 clk_ignore_unused root=/dev/mmcblk1p2 rw rootwait cma=512M
+ZynqMP> boot
+
+7. enable ethernet
+root@axu3eg_custom_plnx:~# ifconfig eth0 192.168.4.103 netmask 255.255.255.0 up
+connect PC to PS ETH port.
+at PC：
+ssh-keygen -f "/home/s/.ssh/known_hosts" -R "192.168.4.103"
+
+8. build and install SDK
+petalinux-build --sdk
+sdk.sh will be created in images/linux dir.
+install process and usage are like chapter C:
+./sdk.sh -d /home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg
+cd /home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg
+. environment-setup-cortexa72-cortexa53-xilinx-linux
+
+9. kernel source
+build/tmp/work-shared/zynqmp-generic/kernel-source/
+
+10. create a vitis platform and test it
+https://github.com/Xilinx/Vitis-Tutorials/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/step3.md
+only c/c++ project is available. just test a 'hello world' project.
+compilation commands which vitis execute:
+aarch64-linux-gnu-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" \
+--sysroot=/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux \
+-I/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux/usr/include \
+-MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+
+aarch64-linux-gnu-gcc -L/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux/lib \
+-L/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux/usr/lib \
+-o "hello.elf"  ./src/helloworld.o   --sysroot=/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux \
+-Wl,-rpath-link=/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux/lib \
+-Wl,-rpath-link=/home/s/titan4_debug/zynq/AXU3EG/axu3eg_custom_pkg/sysroots/cortexa72-cortexa53-xilinx-linux/usr/lib
+
+scp hello/Debug/hello.elf root@192.168.4.103:/tmp
+root@axu3eg_custom_plnx:~# /tmp/hello.elf 
+================start led ctrl==============
+on
+off
+on
+off
+
+11. create a device driver
+. petalinux/settings.sh
+. Xilinx/Vivado/2021.1/settings64.sh
+petalinux-create -t modules --name deviceInput
+edit deviceInput.c (import from axu3eg example)
+edit system-user.dtsi (import from axu3eg example)
+select deviceInput by: petalinux-config -c rootfs
+generate new kernel and dtb: petalinux-build -c kernel
+generate BOOT.bin (include system.dtb):
+petalinux-package --boot --fsbl zynqmp_fsbl.elf --u-boot u-boot.elf --pmufw pmufw.elf --fpga system.bit --atf bl31.elf --force
+copy latest generated BOOT.bin and image.ub to mmcblk1p1
+petalinux-build -c deviceInput
+copy build/tmp/sysroots-components/zynqmp_generic/deviceInput/lib/modules/5.10.0-xilinx-v2021.1/extra/deviceInput.ko to board and:
+root@axu3eg_custom_plnx:~# ls -l /dev/input
+ls: cannot access '/dev/input': No such file or directory
+root@axu3eg_custom_plnx:~# insmod ./deviceInput.ko 
+root@axu3eg_custom_plnx:~# ls -l /dev/input
+total 0
+crw-rw---- 1 root input 13, 64 Mar  9 18:27 event0
+
+12. test device driver
+insmod ./deviceInput.ko
+root@axu3eg_custom_plnx:~# ./main.elf /dev/input/event0 
+led change status
+led change status
+led change status
+(main.elf print message when PS KEY pressed)
