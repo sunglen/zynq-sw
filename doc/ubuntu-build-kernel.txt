@@ -1,0 +1,47 @@
+build kernel for ubuntu amd64
+---
+by Glen for FPGA group
+
+1. https://qiita.com/kakinaguru_zo/items/0a01e081be1e7b08dea1
+https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.10.49.tar.xz
+https://kernel.ubuntu.com/%7Ekernel-ppa/config/hirsute/linux/5.10.0-14.15/amd64-config.flavour.generic
+
+2. need lz4c
+sudo apt install liblz4-tool
+
+3. need pahole > v1.16
+BTF: .tmp_vmlinux.btf: pahole version v1.12 is too old, need at least v1.16
+https://github.com/acmel/dwarves
+
+4. copy amd64-config.flavour.generic to .config
+
+5. make oldconfig to set new kernel's features
+
+6. nice make -j 6 bindeb-pkg
+packages generated:
+linux-libc-dev_5.10.49-1_amd64.deb
+linux-image-5.10.49_5.10.49-1_amd64.deb
+linux-image-5.10.49-dbg_5.10.49-1_amd64.deb
+linux-headers-5.10.49_5.10.49-1_amd64.deb
+
+7. check files in package:
+i.e. dpkg-deb -c linux-image-5.10.49_5.10.49-1_amd64.deb
+
+8. install to notebook which has 11th Gen i7 processor with Iris Xe graphics,
+support basic graphics features (screen brightness adjust, screen expanse, ...):
+(on ubuntu 18.04)
+sudo dpkg -i ./linux-headers-5.10.49_5.10.49-1_amd64.deb
+sudo dpkg -i ./linux-libc-dev_5.10.49-1_amd64.deb
+sudo dpkg -i ./linux-image-5.10.49_5.10.49-1_amd64.deb
+
+9. develop drivers/net/wireless/ath/ath9k/
+
+10. make again
+nice make -j 6 bindeb-pkg
+bug here: make bindeb-pkg takes too much time, since it rebuild
+all kernel modules other than changed ones. how to fix it?
+
+11. another way of build
+make modules
+make bindeb-pkg
+It also takes a very long time to build.
