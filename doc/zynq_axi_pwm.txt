@@ -1,0 +1,65 @@
+axi pwm driver for myip_pwm
+	based on alinx example
+---
+
+0. create project_3
+create myip_pwm_1.0 IP, add it to design.
+make external pwm output as pwm_0.
+
+attention! 
+although get_bd_ports (tcl console) will return /pwm_0 port,
+get_ports will NOT return pwm_0.
+
+therefore, top design (design_1_wrapper.v) must assign pwm_0:
+
+module design_1_wrapper
+   (pwm_0);
+  output pwm_0;
+
+  wire pwm_0;
+
+  design_1 design_1_i
+       (.pwm_0(pwm_0));
+endmodule
+
+1.
+. ~/Xilinx/Vitis/2021.1/settings64.sh
+. ~/petalinux/settings.sh
+
+2.
+petalinux-config --get-hw-description=../design_1_wrapper_3/hw/
+
+3. edit system-user.dtsi
+
+4.
+petalinux-create -t modules --name myipPwm
+
+5.
+petalinux-config -c rootfs
+select myipPwm
+
+6.
+petalinux-build
+attention! "petalinux-build -c kernel" cannot update system.bit in images/linux.
+
+7.
+(optional maybe)petalinux-build -c myipPwm
+
+8.
+cd images/linux
+petalinux-package --boot --fsbl zynqmp_fsbl.elf --u-boot u-boot.elf --pmufw pmufw.elf --fpga system.bit --atf bl31.elf --force
+
+9.
+cp BOOT.BIN /media/s/BOOT/
+cp image.ub /media/s/BOOT/
+sudo cp ../../build/tmp/sysroots-components/zynqmp_generic/myipPwm/lib/modules/5.10.0-xilinx-v2021.1/extra/myipPwm.ko /media/s/ROOTFS/home/root/
+
+10.
+edit test program main.c and build.sh, build myipPwmTest.elf
+
+11.
+sudo cp myipPwmTest.elf /media/s/ROOTFS/home/root/
+
+12. 
+root@axu3eg_custom_plnx:~# insmod ./myipPwm.ko 
+root@axu3eg_custom_plnx:~# ./myipPwmTest.elf /dev/ax_pwm

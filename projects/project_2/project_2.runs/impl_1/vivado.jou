@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 16 14:59:29 2021
+# Process ID: 10109
+# Current directory: /home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

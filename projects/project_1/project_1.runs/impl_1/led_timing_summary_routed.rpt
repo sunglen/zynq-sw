@@ -1,0 +1,1696 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date              : Fri Jul 16 11:29:46 2021
+| Host              : s-PC-VK26MDZNF running 64-bit Ubuntu 18.04.2 LTS
+| Command           : report_timing_summary -max_paths 10 -file led_timing_summary_routed.rpt -pb led_timing_summary_routed.pb -rpx led_timing_summary_routed.rpx -warn_on_violation
+| Design            : led
+| Device            : xczu3eg-sfvc784
+| Speed File        : -1  PRODUCTION 1.29 08-03-2020
+| Temperature Grade : I
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  2           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (1)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      3.214        0.000                      0                   65        0.066        0.000                      0                   65        2.225        0.000                       0                    34  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock      Waveform(ns)         Period(ns)      Frequency(MHz)
+-----      ------------         ----------      --------------
+sys_clk_p  {0.000 2.500}        5.000           200.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_p           3.214        0.000                      0                   65        0.066        0.000                      0                   65        2.225        0.000                       0                    34  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_p
+  To Clock:  sys_clk_p
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.214ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.066ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.225ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.214ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[24]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.635ns  (logic 0.460ns (28.135%)  route 1.175ns (71.865%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.585     3.445    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[24]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[24]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_AFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[24]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.445    
+  -------------------------------------------------------------------
+                         slack                                  3.214    
+
+Slack (MET) :             3.214ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[25]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.635ns  (logic 0.460ns (28.135%)  route 1.175ns (71.865%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.585     3.445    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[25]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[25]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_BFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[25]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.445    
+  -------------------------------------------------------------------
+                         slack                                  3.214    
+
+Slack (MET) :             3.214ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[26]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.635ns  (logic 0.460ns (28.135%)  route 1.175ns (71.865%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.585     3.445    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[26]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[26]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_CFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[26]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.445    
+  -------------------------------------------------------------------
+                         slack                                  3.214    
+
+Slack (MET) :             3.214ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[27]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.635ns  (logic 0.460ns (28.135%)  route 1.175ns (71.865%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.585     3.445    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[27]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[27]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_DFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[27]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.445    
+  -------------------------------------------------------------------
+                         slack                                  3.214    
+
+Slack (MET) :             3.216ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[28]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.633ns  (logic 0.460ns (28.169%)  route 1.173ns (71.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.583     3.443    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[28]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[28]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_EFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[28]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.443    
+  -------------------------------------------------------------------
+                         slack                                  3.216    
+
+Slack (MET) :             3.216ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[29]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.633ns  (logic 0.460ns (28.169%)  route 1.173ns (71.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.583     3.443    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[29]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_FFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[29]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.443    
+  -------------------------------------------------------------------
+                         slack                                  3.216    
+
+Slack (MET) :             3.216ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[30]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.633ns  (logic 0.460ns (28.169%)  route 1.173ns (71.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.583     3.443    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[30]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[30]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_GFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[30]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.443    
+  -------------------------------------------------------------------
+                         slack                                  3.216    
+
+Slack (MET) :             3.216ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[31]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.633ns  (logic 0.460ns (28.169%)  route 1.173ns (71.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.546ns = ( 6.546 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.777ns (routing 0.001ns, distribution 0.776ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.583     3.443    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[31]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.777     6.546    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[31]/C
+                         clock pessimism              0.220     6.766    
+                         clock uncertainty           -0.035     6.731    
+    SLICE_X37Y21         FDRE (Setup_HFF_SLICEM_C_R)
+                                                     -0.072     6.659    timer_cnt_reg[31]
+  -------------------------------------------------------------------
+                         required time                          6.659    
+                         arrival time                          -3.443    
+  -------------------------------------------------------------------
+                         slack                                  3.216    
+
+Slack (MET) :             3.274ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[10]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.577ns  (logic 0.460ns (29.169%)  route 1.117ns (70.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.548ns = ( 6.548 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.779ns (routing 0.001ns, distribution 0.778ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.527     3.387    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[10]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.779     6.548    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[10]/C
+                         clock pessimism              0.220     6.768    
+                         clock uncertainty           -0.035     6.733    
+    SLICE_X37Y19         FDRE (Setup_CFF_SLICEM_C_R)
+                                                     -0.072     6.661    timer_cnt_reg[10]
+  -------------------------------------------------------------------
+                         required time                          6.661    
+                         arrival time                          -3.387    
+  -------------------------------------------------------------------
+                         slack                                  3.274    
+
+Slack (MET) :             3.274ns  (required time - arrival time)
+  Source:                 timer_cnt_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[11]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_p rise@5.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        1.577ns  (logic 0.460ns (29.169%)  route 1.117ns (70.831%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.548ns = ( 6.548 - 5.000 ) 
+    Source Clock Delay      (SCD):    1.810ns
+    Clock Pessimism Removal (CPR):    0.220ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      0.905ns (routing 0.001ns, distribution 0.904ns)
+  Clock Net Delay (Destination): 0.779ns (routing 0.001ns, distribution 0.778ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.484     0.484 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.534    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.534 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.343     0.877    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.905 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.905     1.810    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.095     1.905 r  timer_cnt_reg[6]/Q
+                         net (fo=2, routed)           0.302     2.207    timer_cnt_reg[6]
+    SLICE_X37Y17         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.148     2.355 f  timer_cnt[0]_i_8/O
+                         net (fo=1, routed)           0.055     2.410    timer_cnt[0]_i_8_n_0
+    SLICE_X37Y17         LUT6 (Prop_H6LUT_SLICEM_I3_O)
+                                                      0.117     2.527 r  timer_cnt[0]_i_5/O
+                         net (fo=2, routed)           0.233     2.760    timer_cnt[0]_i_5_n_0
+    SLICE_X36Y20         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.100     2.860 r  timer_cnt[0]_i_1/O
+                         net (fo=32, routed)          0.527     3.387    timer_cnt[0]_i_1_n_0
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[11]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      5.000     5.000 r  
+    AE5                                               0.000     5.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     5.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.403     5.403 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     5.443    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     5.443 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.302     5.745    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     5.769 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.779     6.548    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[11]/C
+                         clock pessimism              0.220     6.768    
+                         clock uncertainty           -0.035     6.733    
+    SLICE_X37Y19         FDRE (Setup_DFF_SLICEM_C_R)
+                                                     -0.072     6.661    timer_cnt_reg[11]
+  -------------------------------------------------------------------
+                         required time                          6.661    
+                         arrival time                          -3.387    
+  -------------------------------------------------------------------
+                         slack                                  3.274    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[17]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.118ns  (logic 0.056ns (47.458%)  route 0.062ns (52.542%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.123ns
+    Source Clock Delay      (SCD):    0.907ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.459ns (routing 0.000ns, distribution 0.459ns)
+  Clock Net Delay (Destination): 0.524ns (routing 0.001ns, distribution 0.523ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.459     0.907    sys_clk_BUFG
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[17]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y20         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.038     0.945 r  timer_cnt_reg[17]/Q
+                         net (fo=2, routed)           0.055     1.000    timer_cnt_reg[17]
+    SLICE_X37Y20         CARRY8 (Prop_CARRY8_SLICEM_S[1]_O[1])
+                                                      0.018     1.018 r  timer_cnt_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.007     1.025    timer_cnt_reg[16]_i_1_n_14
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.524     1.123    sys_clk_BUFG
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[17]/C
+                         clock pessimism             -0.210     0.913    
+    SLICE_X37Y20         FDRE (Hold_BFF_SLICEM_C_D)
+                                                      0.046     0.959    timer_cnt_reg[17]
+  -------------------------------------------------------------------
+                         required time                         -0.959    
+                         arrival time                           1.025    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.118ns  (logic 0.056ns (47.458%)  route 0.062ns (52.542%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.124ns
+    Source Clock Delay      (SCD):    0.908ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.460ns (routing 0.000ns, distribution 0.460ns)
+  Clock Net Delay (Destination): 0.525ns (routing 0.001ns, distribution 0.524ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.460     0.908    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.038     0.946 r  timer_cnt_reg[1]/Q
+                         net (fo=2, routed)           0.055     1.001    timer_cnt_reg[1]
+    SLICE_X37Y18         CARRY8 (Prop_CARRY8_SLICEM_S[1]_O[1])
+                                                      0.018     1.019 r  timer_cnt_reg[0]_i_2/O[1]
+                         net (fo=1, routed)           0.007     1.026    timer_cnt_reg[0]_i_2_n_14
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.525     1.124    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[1]/C
+                         clock pessimism             -0.210     0.914    
+    SLICE_X37Y18         FDRE (Hold_BFF_SLICEM_C_D)
+                                                      0.046     0.960    timer_cnt_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.960    
+                         arrival time                           1.026    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[25]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.118ns  (logic 0.056ns (47.458%)  route 0.062ns (52.542%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.122ns
+    Source Clock Delay      (SCD):    0.906ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.458ns (routing 0.000ns, distribution 0.458ns)
+  Clock Net Delay (Destination): 0.523ns (routing 0.001ns, distribution 0.522ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.458     0.906    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y21         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.038     0.944 r  timer_cnt_reg[25]/Q
+                         net (fo=2, routed)           0.055     0.999    timer_cnt_reg[25]
+    SLICE_X37Y21         CARRY8 (Prop_CARRY8_SLICEM_S[1]_O[1])
+                                                      0.018     1.017 r  timer_cnt_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.007     1.024    timer_cnt_reg[24]_i_1_n_14
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.523     1.122    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[25]/C
+                         clock pessimism             -0.210     0.912    
+    SLICE_X37Y21         FDRE (Hold_BFF_SLICEM_C_D)
+                                                      0.046     0.958    timer_cnt_reg[25]
+  -------------------------------------------------------------------
+                         required time                         -0.958    
+                         arrival time                           1.024    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.118ns  (logic 0.056ns (47.458%)  route 0.062ns (52.542%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.124ns
+    Source Clock Delay      (SCD):    0.907ns
+    Clock Pessimism Removal (CPR):    0.211ns
+  Clock Net Delay (Source):      0.459ns (routing 0.000ns, distribution 0.459ns)
+  Clock Net Delay (Destination): 0.525ns (routing 0.001ns, distribution 0.524ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.459     0.907    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y19         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.038     0.945 r  timer_cnt_reg[9]/Q
+                         net (fo=2, routed)           0.055     1.000    timer_cnt_reg[9]
+    SLICE_X37Y19         CARRY8 (Prop_CARRY8_SLICEM_S[1]_O[1])
+                                                      0.018     1.018 r  timer_cnt_reg[8]_i_1/O[1]
+                         net (fo=1, routed)           0.007     1.025    timer_cnt_reg[8]_i_1_n_14
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.525     1.124    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[9]/C
+                         clock pessimism             -0.211     0.913    
+    SLICE_X37Y19         FDRE (Hold_BFF_SLICEM_C_D)
+                                                      0.046     0.959    timer_cnt_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -0.959    
+                         arrival time                           1.025    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.122ns  (logic 0.057ns (46.721%)  route 0.065ns (53.279%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.124ns
+    Source Clock Delay      (SCD):    0.907ns
+    Clock Pessimism Removal (CPR):    0.211ns
+  Clock Net Delay (Source):      0.459ns (routing 0.000ns, distribution 0.459ns)
+  Clock Net Delay (Destination): 0.525ns (routing 0.001ns, distribution 0.524ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.459     0.907    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y19         FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.038     0.945 r  timer_cnt_reg[10]/Q
+                         net (fo=2, routed)           0.058     1.003    timer_cnt_reg[10]
+    SLICE_X37Y19         CARRY8 (Prop_CARRY8_SLICEM_S[2]_O[2])
+                                                      0.019     1.022 r  timer_cnt_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.007     1.029    timer_cnt_reg[8]_i_1_n_13
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.525     1.124    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[10]/C
+                         clock pessimism             -0.211     0.913    
+    SLICE_X37Y19         FDRE (Hold_CFF_SLICEM_C_D)
+                                                      0.046     0.959    timer_cnt_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -0.959    
+                         arrival time                           1.029    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[18]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.122ns  (logic 0.057ns (46.721%)  route 0.065ns (53.279%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.123ns
+    Source Clock Delay      (SCD):    0.907ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.459ns (routing 0.000ns, distribution 0.459ns)
+  Clock Net Delay (Destination): 0.524ns (routing 0.001ns, distribution 0.523ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.459     0.907    sys_clk_BUFG
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y20         FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.038     0.945 r  timer_cnt_reg[18]/Q
+                         net (fo=2, routed)           0.058     1.003    timer_cnt_reg[18]
+    SLICE_X37Y20         CARRY8 (Prop_CARRY8_SLICEM_S[2]_O[2])
+                                                      0.019     1.022 r  timer_cnt_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.007     1.029    timer_cnt_reg[16]_i_1_n_13
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.524     1.123    sys_clk_BUFG
+    SLICE_X37Y20         FDRE                                         r  timer_cnt_reg[18]/C
+                         clock pessimism             -0.210     0.913    
+    SLICE_X37Y20         FDRE (Hold_CFF_SLICEM_C_D)
+                                                      0.046     0.959    timer_cnt_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -0.959    
+                         arrival time                           1.029    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[26]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.122ns  (logic 0.057ns (46.721%)  route 0.065ns (53.279%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.122ns
+    Source Clock Delay      (SCD):    0.906ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.458ns (routing 0.000ns, distribution 0.458ns)
+  Clock Net Delay (Destination): 0.523ns (routing 0.001ns, distribution 0.522ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.458     0.906    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y21         FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.038     0.944 r  timer_cnt_reg[26]/Q
+                         net (fo=2, routed)           0.058     1.002    timer_cnt_reg[26]
+    SLICE_X37Y21         CARRY8 (Prop_CARRY8_SLICEM_S[2]_O[2])
+                                                      0.019     1.021 r  timer_cnt_reg[24]_i_1/O[2]
+                         net (fo=1, routed)           0.007     1.028    timer_cnt_reg[24]_i_1_n_13
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.523     1.122    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[26]/C
+                         clock pessimism             -0.210     0.912    
+    SLICE_X37Y21         FDRE (Hold_CFF_SLICEM_C_D)
+                                                      0.046     0.958    timer_cnt_reg[26]
+  -------------------------------------------------------------------
+                         required time                         -0.958    
+                         arrival time                           1.028    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+Slack (MET) :             0.070ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.122ns  (logic 0.057ns (46.721%)  route 0.065ns (53.279%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.124ns
+    Source Clock Delay      (SCD):    0.908ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.460ns (routing 0.000ns, distribution 0.460ns)
+  Clock Net Delay (Destination): 0.525ns (routing 0.001ns, distribution 0.524ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.460     0.908    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y18         FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.038     0.946 r  timer_cnt_reg[2]/Q
+                         net (fo=2, routed)           0.058     1.004    timer_cnt_reg[2]
+    SLICE_X37Y18         CARRY8 (Prop_CARRY8_SLICEM_S[2]_O[2])
+                                                      0.019     1.023 r  timer_cnt_reg[0]_i_2/O[2]
+                         net (fo=1, routed)           0.007     1.030    timer_cnt_reg[0]_i_2_n_13
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.525     1.124    sys_clk_BUFG
+    SLICE_X37Y18         FDRE                                         r  timer_cnt_reg[2]/C
+                         clock pessimism             -0.210     0.914    
+    SLICE_X37Y18         FDRE (Hold_CFF_SLICEM_C_D)
+                                                      0.046     0.960    timer_cnt_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.960    
+                         arrival time                           1.030    
+  -------------------------------------------------------------------
+                         slack                                  0.070    
+
+Slack (MET) :             0.071ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[31]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.123ns  (logic 0.057ns (46.341%)  route 0.066ns (53.659%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.121ns
+    Source Clock Delay      (SCD):    0.905ns
+    Clock Pessimism Removal (CPR):    0.210ns
+  Clock Net Delay (Source):      0.457ns (routing 0.000ns, distribution 0.457ns)
+  Clock Net Delay (Destination): 0.522ns (routing 0.001ns, distribution 0.521ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.457     0.905    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y21         FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.039     0.944 r  timer_cnt_reg[31]/Q
+                         net (fo=2, routed)           0.059     1.003    timer_cnt_reg[31]
+    SLICE_X37Y21         CARRY8 (Prop_CARRY8_SLICEM_S[7]_O[7])
+                                                      0.018     1.021 r  timer_cnt_reg[24]_i_1/O[7]
+                         net (fo=1, routed)           0.007     1.028    timer_cnt_reg[24]_i_1_n_8
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.522     1.121    sys_clk_BUFG
+    SLICE_X37Y21         FDRE                                         r  timer_cnt_reg[31]/C
+                         clock pessimism             -0.210     0.911    
+    SLICE_X37Y21         FDRE (Hold_HFF_SLICEM_C_D)
+                                                      0.046     0.957    timer_cnt_reg[31]
+  -------------------------------------------------------------------
+                         required time                         -0.957    
+                         arrival time                           1.028    
+  -------------------------------------------------------------------
+                         slack                                  0.071    
+
+Slack (MET) :             0.071ns  (arrival time - required time)
+  Source:                 timer_cnt_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            timer_cnt_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_p  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             sys_clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_p rise@0.000ns - sys_clk_p rise@0.000ns)
+  Data Path Delay:        0.123ns  (logic 0.057ns (46.341%)  route 0.066ns (53.659%))
+  Logic Levels:           1  (CARRY8=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.123ns
+    Source Clock Delay      (SCD):    0.906ns
+    Clock Pessimism Removal (CPR):    0.211ns
+  Clock Net Delay (Source):      0.458ns (routing 0.000ns, distribution 0.458ns)
+  Clock Net Delay (Destination): 0.524ns (routing 0.001ns, distribution 0.523ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.235     0.235 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.275    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.275 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.156     0.431    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.017     0.448 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.458     0.906    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y19         FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.039     0.945 r  timer_cnt_reg[15]/Q
+                         net (fo=2, routed)           0.059     1.004    timer_cnt_reg[15]
+    SLICE_X37Y19         CARRY8 (Prop_CARRY8_SLICEM_S[7]_O[7])
+                                                      0.018     1.022 r  timer_cnt_reg[8]_i_1/O[7]
+                         net (fo=1, routed)           0.007     1.029    timer_cnt_reg[8]_i_1_n_8
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_p rise edge)
+                                                      0.000     0.000 r  
+    AE5                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    IBUFDS_inst/I
+    HPIOBDIFFINBUF_X0Y11 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.333     0.333 r  IBUFDS_inst/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.383    IBUFDS_inst/OUT
+    AE5                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.383 r  IBUFDS_inst/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.197     0.580    sys_clk
+    BUFGCE_X0Y8          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.019     0.599 r  sys_clk_BUFG_inst/O
+    X1Y0 (CLOCK_ROOT)    net (fo=33, routed)          0.524     1.123    sys_clk_BUFG
+    SLICE_X37Y19         FDRE                                         r  timer_cnt_reg[15]/C
+                         clock pessimism             -0.211     0.912    
+    SLICE_X37Y19         FDRE (Hold_HFF_SLICEM_C_D)
+                                                      0.046     0.958    timer_cnt_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -0.958    
+                         arrival time                           1.029    
+  -------------------------------------------------------------------
+                         slack                                  0.071    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_p
+Waveform(ns):       { 0.000 2.500 }
+Period(ns):         5.000
+Sources:            { sys_clk_p }
+
+Check Type        Corner  Lib Pin   Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     BUFGCE/I  n/a            1.499         5.000       3.501      BUFGCE_X0Y8   sys_clk_BUFG_inst/I
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X36Y20  led_reg/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y18  timer_cnt_reg[0]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[10]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[11]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[12]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[13]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[14]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y19  timer_cnt_reg[15]/C
+Min Period        n/a     FDRE/C    n/a            0.550         5.000       4.450      SLICE_X37Y20  timer_cnt_reg[16]/C
+Low Pulse Width   Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X36Y20  led_reg/C
+Low Pulse Width   Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X36Y20  led_reg/C
+Low Pulse Width   Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y18  timer_cnt_reg[0]/C
+Low Pulse Width   Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y18  timer_cnt_reg[0]/C
+Low Pulse Width   Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[10]/C
+Low Pulse Width   Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[10]/C
+Low Pulse Width   Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[11]/C
+Low Pulse Width   Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[11]/C
+Low Pulse Width   Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[12]/C
+Low Pulse Width   Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[12]/C
+High Pulse Width  Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X36Y20  led_reg/C
+High Pulse Width  Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X36Y20  led_reg/C
+High Pulse Width  Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y18  timer_cnt_reg[0]/C
+High Pulse Width  Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y18  timer_cnt_reg[0]/C
+High Pulse Width  Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[10]/C
+High Pulse Width  Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[10]/C
+High Pulse Width  Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[11]/C
+High Pulse Width  Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[11]/C
+High Pulse Width  Slow    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[12]/C
+High Pulse Width  Fast    FDRE/C    n/a            0.275         2.500       2.225      SLICE_X37Y19  timer_cnt_reg[12]/C
+
+
+

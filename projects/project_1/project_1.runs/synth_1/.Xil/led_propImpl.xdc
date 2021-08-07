@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:/home/s/project_1/project_1.srcs/constrs_1/new/led.xdc rfile:../../../project_1.srcs/constrs_1/new/led.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AE12 [get_ports led]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AF12 [get_ports rst_n]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AE5 [get_ports sys_clk_p]

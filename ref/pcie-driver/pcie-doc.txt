@@ -1,0 +1,15 @@
+ep:
+https://github.com/Xilinx/dma_ip_drivers
+
+https://www.xilinx.com/support/answers/72723.html
+
+https://xilinx.github.io/dma_ip_drivers/2019.1/linux-kernel/html/index.html
+
+rp:
+https://www.xilinx.com/support/answers/70702.html
+
+https://www.xilinx.com/support/answers/34536.html
+
+https://wiki.trenz-electronic.de/display/ToT/Petalinux+PCIe+step+by+step
+
+https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842417/Linux+ZynqMP+PS-PCIe+Root+Port+Driver

@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jul 20 00:07:13 2021
+# Process ID: 10119
+# Current directory: /home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+Command: open_checkpoint design_1_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2546.871 ; gain = 5.938 ; free physical = 370 ; free virtual = 18474
+INFO: [Device 21-403] Loading part xazu3eg-sfvc784-1-i
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2549.031 ; gain = 0.000 ; free physical = 416 ; free virtual = 18580
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-5435] Cannot read file, the software version for the checkpoint (2020.1.2902540) does not match the current software version (2021.1.3247384).
+  File : /home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper_routed/design_1_wrapper.xbdc.
+Parsing XDC File [/home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper_routed/design_1_wrapper_early.xdc]
+Finished Parsing XDC File [/home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper_routed/design_1_wrapper_early.xdc]
+Parsing XDC File [/home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper_routed/design_1_wrapper.xdc]
+Finished Parsing XDC File [/home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/design_1_wrapper_routed/design_1_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2549.031 ; gain = 0.000 ; free physical = 295 ; free virtual = 18471
+Restored from archive | CPU: 1.030000 secs | Memory: 0.724121 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2549.031 ; gain = 0.000 ; free physical = 295 ; free virtual = 18471
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2925.199 ; gain = 0.000 ; free physical = 258 ; free virtual = 18131
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.1 (64-bit) build 2902540
+open_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2925.199 ; gain = 387.234 ; free physical = 257 ; free virtual = 18130
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xazu3eg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xazu3eg'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/s/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 32624448 bits.
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [#UNDEF] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/s/Downloads/course_s2/12_ps_emio/vivado/ps_emio.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Jul 20 00:08:06 2021. For additional details about this file, please refer to the WebTalk help file at /home/s/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:25 . Memory (MB): peak = 3457.398 ; gain = 532.199 ; free physical = 861 ; free virtual = 17897
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 20 00:08:06 2021...

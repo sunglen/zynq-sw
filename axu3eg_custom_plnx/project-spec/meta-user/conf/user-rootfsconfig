@@ -1,0 +1,17 @@
+#Note: Mention Each package in individual line
+#These packages will get added into rootfs menu entry
+
+CONFIG_gpio-demo
+CONFIG_peekpoke
+
+CONFIG_dnf
+CONFIG_e2fsprogs-resize2fs
+CONFIG_parted
+CONFIG_resize-part
+
+CONFIG_mesa-megadriver
+CONFIG_packagegroup-petalinux-x11
+CONFIG_packagegroup-petalinux-v4lutils
+CONFIG_packagegroup-petalinux-matchboxCONFIG_deviceInput
+CONFIG_deviceInput
+CONFIG_myipPwm

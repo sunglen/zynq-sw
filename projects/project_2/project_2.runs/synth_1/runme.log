@@ -1,0 +1,238 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top design_1_wrapper -part xczu3eg-sfvc784-1-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9912
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2616.367 ; gain = 42.777 ; free physical = 124 ; free virtual = 13585
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/synth_1/.Xil/Vivado-9883-s-HP-Laptop-14s-cr2xxx/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (1#1) [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/synth_1/.Xil/Vivado-9883-s-HP-Laptop-14s-cr2xxx/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awaddr' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awlen' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awsize' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awburst' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awlock' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awcache' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awprot' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_wdata' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_wstrb' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_wlast' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_wvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_bready' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_araddr' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arlen' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arsize' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arburst' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arlock' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arcache' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arprot' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_rready' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_awqos' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'maxigp2_arqos' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7071] port 'pl_resetn0' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 13 given [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (2#1) [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (3#1) [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2654.336 ; gain = 80.746 ; free physical = 107 ; free virtual = 12930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2672.148 ; gain = 98.559 ; free physical = 145 ; free virtual = 12818
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2672.148 ; gain = 98.559 ; free physical = 145 ; free virtual = 12818
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2672.148 ; gain = 0.000 ; free physical = 162 ; free virtual = 12808
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.961 ; gain = 0.000 ; free physical = 610 ; free virtual = 13534
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2759.961 ; gain = 0.000 ; free physical = 608 ; free virtual = 13535
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2759.961 ; gain = 186.371 ; free physical = 651 ; free virtual = 13604
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2759.961 ; gain = 186.371 ; free physical = 651 ; free virtual = 13604
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2759.961 ; gain = 186.371 ; free physical = 651 ; free virtual = 13604
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2759.961 ; gain = 186.371 ; free physical = 649 ; free virtual = 13604
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2759.961 ; gain = 186.371 ; free physical = 633 ; free virtual = 13596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 3207.336 ; gain = 633.746 ; free physical = 122 ; free virtual = 13042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 3207.336 ; gain = 633.746 ; free physical = 122 ; free virtual = 13042
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 3226.367 ; gain = 652.777 ; free physical = 135 ; free virtual = 13032
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13032
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13032
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |design_1_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |design_1_zynq_ultra_ps_e_0 |     1|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.305 ; gain = 658.715 ; free physical = 134 ; free virtual = 13033
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 3232.305 ; gain = 570.902 ; free physical = 171 ; free virtual = 13070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3232.312 ; gain = 658.715 ; free physical = 171 ; free virtual = 13070
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3232.312 ; gain = 0.000 ; free physical = 163 ; free virtual = 13063
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3265.992 ; gain = 0.000 ; free physical = 186 ; free virtual = 13098
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: df1597b
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3279.930 ; gain = 837.344 ; free physical = 326 ; free virtual = 13238
+INFO: [Common 17-1381] The checkpoint '/home/s/titan4_debug/zynq/AXU3EG/project_2/project_2.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 16 14:59:17 2021...

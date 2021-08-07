@@ -1,0 +1,21 @@
+AXU3EG资料链接：https://pan.baidu.com/s/1NaAYJN4La1JprYuUN5flhw 
+提取码：5741
+软件包链接：https://pan.baidu.com/s/1yWcxMFvHPhUumOs1ZtwLng 
+提取码：5kwq
+
+在ubuntu上运行zynq开发环境的注意事项：
+1）Vivado不要安装在Windows分区（如NTFS），故障经常发生。
+2）Vitis如果安装在Windows分区，不会出现故障。
+3）应安装Vivado和Vitis到固态硬盘。
+
+硬件注意事项：
+1）SW1向上拨为ON，即为0，JTAG模式为全向上拨（0000）。
+
+XILINX 14 PIN JTAG <--> AXU3EG 10 PIN JTAG
+2(VREF) <--> 4
+3(GND) <--> 2
+4(TMS) <--> 5
+6(TCK) <--> 1
+8(TDO) <--> 3
+10(TDI) <--> 9
+
