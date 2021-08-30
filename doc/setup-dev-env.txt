@@ -250,3 +250,23 @@ led change status
 led change status
 led change status
 (main.elf print message when PS KEY pressed)
+
+13. wrong definition of ${hdf} cause zcu106 building failed
+
+problem: build fpga-manager-util failed: zcu106_1.0.dtbo not found. (on Yafan's PC, build for zcu106_reva)
+
+but on Glen's PC: (build for zynqmp_generic)
+s@s-HP-Laptop-14s-cr2xxx:~/titan4_debug/zynq/AXU3EG/axu3eg_custom_plnx$ find . -exec grep -l '${hdf}' '{}' ';' 2>/dev/null
+./build/misc/config/hw-description/hw-description.tcl
+./components/yocto/layers/meta-xilinx-tools/scripts/multipleHDF.tcl
+./components/yocto/layers/meta-xilinx-tools/recipes-bsp/fpga-manager-util/fpga-manager-util_1.0.bb
+
+fpga-manager-util_1.0.bb is the base build script.
+
+s@s-HP-Laptop-14s-cr2xxx:~/titan4_debug/zynq/AXU3EG/axu3eg_custom_plnx$ petalinux-build -c fpga-manager-util
+...
+[INFO] Successfully built fpga-manager-util
+
+in axu3eg_custom_plnx/build/tmp/work/zynqmp_generic-xilinx-linux/fpga-manager-util/xilinx+gitAUTOINC+252758eb1f-r0/temp/run.do_install.3535:
+${HDF_LIST} is empty.
+
