@@ -1,0 +1,8 @@
+to enable the reserved memory, copy (overwrite) system-user.dtsi to:
+/media/hy/HD/prj_zcu104_C2C/prj_plnx2/project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+
+references:
+1. https://www.dazhuanlan.com/chin-chin/topics/1683698
+2. https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841683/Linux+Reserved+Memory
+3. https://www.kernel.org/doc/Documentation/devicetree/bindings/reserved-memory/reserved-memory.txt
+4. https://forums.xilinx.com/t5/Embedded-Linux/Reserve-memory-in-device-tree/td-p/905970
