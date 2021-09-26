@@ -1,0 +1,236 @@
+root@xilinx-zcu104-2021_1:~# insmod  ./galcore.ko  contiguousBase=0x400000000  contiguousSize=0x10000000 showArgs=1 recovery=0 mmu=1  
+[  121.297991] Galcore version 6.4.6.6.355196
+[  121.302101] Galcore options:
+[  121.304981]   irqLine           = -1
+[  121.308541]   isrPoll           = 1
+[  121.312021]   registerMemBase   = 0x4F8000000
+[  121.316372]   registerMemSize   = 0x00020000
+[  121.320637]   contiguousSize    = 0x10000000
+[  121.324902]   contiguousBase    = 0x400000000
+[  121.329249]   externalSize      = 0x00000000
+[  121.333523]   externalBase      = 0x0
+[  121.337174]   exclusiveSize     = 0x00000000
+[  121.341436]   exclusiveBase     = 0x0
+[  121.345090]   bankSize          = 0x00000000
+[  121.349352]   fastClear         = -1
+[  121.352919]   compression       = 15
+[  121.356480]   powerManagement   = 1
+[  121.359959]   baseAddress       = 0x00000000
+[  121.364221]   physSize          = 0x00000000
+[  121.368483]   recovery          = 0
+[  121.371963]   stuckDump         = 0
+[  121.375444]   GPU smallBatch    = 1
+[  121.378924]   allMapInOne       = 1
+[  121.382405]   enableNN          = 0xff
+[  121.386146]   userClusterMasks  = 
+[  121.386148] ff, 
+[  121.389540] ff, 
+[  121.391365] ff, 
+[  121.393196] ff, 
+[  121.395020] ff, 
+[  121.396850] ff, 
+[  121.398674] ff, 
+[  121.400496] ff, 
+[  121.402327] 
+[  121.405632]   irqs              = 
+[  121.405634] -1, 
+[  121.409028] -1, 
+[  121.410852] -1, 
+[  121.412674] -1, 
+[  121.414505] -1, 
+[  121.416329] -1, 
+[  121.418159] -1, 
+[  121.419983] -1, 
+[  121.421813] -1, 
+[  121.423637] -1, 
+[  121.425468] -1, 
+[  121.427291] 
+[  121.430599]   registerBases     = 
+[  121.430601] 0xF8000000, 
+[  121.433992] 0x00000000, 
+[  121.436510] 0x00000000, 
+[  121.439035] 0x00000000, 
+[  121.441559] 0x00000000, 
+[  121.444079] 0x00000000, 
+[  121.446603] 0x00000000, 
+[  121.449128] 0x00000000, 
+[  121.451648] 0x00000000, 
+[  121.454171] 0x00000000, 
+[  121.456691] 0x00000000, 
+[  121.459222] 
+[  121.463227]   registerSizes     = 
+[  121.463229] 0x00020000, 
+[  121.466620] 0x00000000, 
+[  121.469144] 0x00000000, 
+[  121.471664] 0x00000000, 
+[  121.474189] 0x00000000, 
+[  121.476707] 0x00000000, 
+[  121.479232] 0x00000000, 
+[  121.481756] 0x00000000, 
+[  121.484276] 0x00000000, 
+[  121.486800] 0x00000000, 
+[  121.489325] 0x00000000, 
+[  121.491844] 
+[  121.495846]   chipIDs           = 
+[  121.495849] 0xFFFFFFFF, 
+[  121.499239] 0xFFFFFFFF, 
+[  121.501763] 0xFFFFFFFF, 
+[  121.504283] 0xFFFFFFFF, 
+[  121.506808] 0xFFFFFFFF, 
+[  121.509333] 0xFFFFFFFF, 
+[  121.511852] 0xFFFFFFFF, 
+[  121.514377] 0xFFFFFFFF, 
+[  121.516903] 0xFFFFFFFF, 
+[  121.519421] 0xFFFFFFFF, 
+[  121.521946] 0xFFFFFFFF, 
+[  121.524464] 
+[  121.528466]   core 0 internal sRAMBases = 
+[  121.528469] 0xFFFFFFFFFFFFFFFF, 
+[  121.532562] 0xFFFFFFFFFFFFFFFF, 
+[  121.535780] 
+[  121.540479]   core 1 internal sRAMBases = 
+[  121.540482] 0xFFFFFFFFFFFFFFFF, 
+[  121.544566] 0xFFFFFFFFFFFFFFFF, 
+[  121.547784] 
+[  121.552484]   core 2 internal sRAMBases = 
+[  121.552486] 0xFFFFFFFFFFFFFFFF, 
+[  121.556580] 0xFFFFFFFFFFFFFFFF, 
+[  121.559797] 
+[  121.564497]   core 3 internal sRAMBases = 
+[  121.564499] 0xFFFFFFFFFFFFFFFF, 
+[  121.568593] 0xFFFFFFFFFFFFFFFF, 
+[  121.571811] 
+[  121.576510]   core 4 internal sRAMBases = 
+[  121.576512] 0xFFFFFFFFFFFFFFFF, 
+[  121.580606] 0xFFFFFFFFFFFFFFFF, 
+[  121.583827] 
+[  121.588523]   core 5 internal sRAMBases = 
+[  121.588526] 0xFFFFFFFFFFFFFFFF, 
+[  121.592619] 0xFFFFFFFFFFFFFFFF, 
+[  121.595837] 
+[  121.600536]   core 6 internal sRAMBases = 
+[  121.600539] 0xFFFFFFFFFFFFFFFF, 
+[  121.604632] 0xFFFFFFFFFFFFFFFF, 
+[  121.607850] 
+[  121.612549]   core 7 internal sRAMBases = 
+[  121.612552] 0xFFFFFFFFFFFFFFFF, 
+[  121.616645] 0xFFFFFFFFFFFFFFFF, 
+[  121.619863] 
+[  121.624563]   core 8 internal sRAMBases = 
+[  121.624565] 0xFFFFFFFFFFFFFFFF, 
+[  121.628658] 0xFFFFFFFFFFFFFFFF, 
+[  121.631876] 
+[  121.636576]   core 9 internal sRAMBases = 
+[  121.636578] 0xFFFFFFFFFFFFFFFF, 
+[  121.640671] 0xFFFFFFFFFFFFFFFF, 
+[  121.643889] 
+[  121.648589]   core 10 internal sRAMBases = 
+[  121.648591] 0xFFFFFFFFFFFFFFFF, 
+[  121.652771] 0xFFFFFFFFFFFFFFFF, 
+[  121.655989] 
+[  121.660689]   External sRAMBases = 
+[  121.660691] 0xffffffffffffffff, 
+[  121.664168] 0xffffffffffffffff, 
+[  121.667385] 
+[  121.672085]   mmuPageTablePool  = 1
+[  121.675565]   mmuDynamicMap     = 1
+[  121.679044]   isrPoll           = 0x00000001
+[  121.683307] Build options:
+[  121.686006]   gcdGPU_TIMEOUT    = 2000000
+[  121.690008]   gcdGPU_2D_TIMEOUT = 4000
+[  121.693748]   gcdINTERRUPT_STATISTIC = 1
+[  121.697670] Get register base 4f8000000 of core 0
+[  121.702369] Get register base 0 of core 1
+[  121.706378] Get register base 0 of core 2
+[  121.710380] Get register base 0 of core 3
+[  121.714383] Get register base 0 of core 4
+[  121.718383] Get register base 0 of core 5
+[  121.722386] Get register base 0 of core 6
+[  121.726394] Get register base 0 of core 7
+[  121.730400] Get register base 0 of core 8
+[  121.734406] Get register base 0 of core 9
+[  121.738409] Get register base 0 of core 10
+[  121.742715] gckOS_ImportAllocators(171) Allocator: gfp
+[  121.747851] gckOS_ImportAllocators(171) Allocator: user
+[  121.753071] gckOS_ImportAllocators(171) Allocator: dmabuf
+[  121.758458] gckOS_ImportAllocators(171) Allocator: dma
+[  121.763589] gckOS_ImportAllocators(171) Allocator: reserved-mem
+[  121.769521] [GALCORE] INDEX:         bank 0
+[  121.773701] [GALCORE] VERTEX:        bank 0
+[  121.777875] [GALCORE] TEXTURE:       bank 0
+[  121.782051] [GALCORE] RENDER_TARGET: bank 0
+[  121.786224] [GALCORE] DEPTH:         bank 0
+[  121.790401] [GALCORE] TILE_STATUS:   bank 0
+[  121.794580] Galcore Info: ContiguousBase=0x400000000 ContiguousSize=0x10000000
+[  121.801864] Identity: chipModel=9000
+[  121.805434] Identity: chipRevision=8302
+[  121.831466] **** _GetGPUPhysical [0x400000000] CPUPhysical[0x400000000] 
+[  121.838173] Allocated 1024 bytes @ 0x3e17400 [0x00000000]
+[  121.843589] **** _GetGPUPhysical [0x400000000] CPUPhysical[0x400000000] 
+[  121.850294] Unable to handle kernel paging request at virtual address ffff800011799000
+[  121.858202] Mem abort info:
+[  121.860986]   ESR = 0x96000061
+[  121.864028]   EC = 0x25: DABT (current EL), IL = 32 bits
+[  121.869329]   SET = 0, FnV = 0
+[  121.872368]   EA = 0, S1PTW = 0
+[  121.875499] Data abort info:
+[  121.878373]   ISV = 0, ISS = 0x00000061
+[  121.882201]   CM = 0, WnR = 1
+[  121.885162] swapper pgtable: 4k pages, 48-bit VAs, pgdp=0000000001207000
+[  121.891854] [ffff800011799000] pgd=000000007feff003, p4d=000000007feff003, pud=000000007fefe003, pmd=00000000018ba003, pte=0068000400000717
+[  121.904379] Internal error: Oops: 96000061 [#1] SMP
+[  121.909241] Modules linked in: galcore(O+) dmaproxy(O) mali(O) uio_pdrv_genirq
+[  121.916466] CPU: 1 PID: 833 Comm: insmod Tainted: G           O      5.10.0-xilinx-v2021.1 #1
+[  121.924977] Hardware name: ZynqMP ZCU104 RevC (DT)
+[  121.929754] pstate: 40000005 (nZcv daif -PAN -UAO -TCO BTYPE=--)
+[  121.935757] pc : __memset+0x16c/0x188
+[  121.939465] lr : gckOS_ZeroMemory+0x64/0x170 [galcore]
+[  121.944586] sp : ffff8000118cb5a0
+[  121.947884] x29: ffff8000118cb5a0 x28: ffff0000032f6c08 
+[  121.953187] x27: 0000000010000000 x26: ffff000003d43058 
+[  121.958491] x25: ffff000002522240 x24: ffff8000118cb640 
+[  121.963794] x23: ffff800008f007f0 x22: ffff000001a98c00 
+[  121.969098] x21: 0000000000000400 x20: ffff800011799000 
+[  121.974401] x19: ffff800008efe980 x18: 0000000000000030 
+[  121.979705] x17: 0000000000000000 x16: 0000000000000002 
+[  121.985008] x15: ffff000002522658 x14: ffffffffffffffff 
+[  121.990311] x13: ffff800011443de0 x12: 0000000000000669 
+[  121.995615] x11: 0000000000000223 x10: ffff80001146fde0 
+[  122.000918] x9 : 0000000000000000 x8 : ffff800011799000 
+[  122.006222] x7 : 0000000000000000 x6 : 000000000000003f 
+[  122.011525] x5 : 0000000000000040 x4 : 0000000000000000 
+[  122.016829] x3 : 0000000000000004 x2 : 00000000000003c0 
+[  122.022132] x1 : 0000000000000000 x0 : ffff800011799000 
+[  122.027436] Call trace:
+[  122.029870]  __memset+0x16c/0x188
+[  122.033215]  _Construct+0x564/0x13e8 [galcore]
+[  122.037684]  gckMMU_Construct+0x10/0x20 [galcore]
+[  122.042414]  gckKERNEL_Construct+0x89c/0xdc0 [galcore]
+[  122.047579]  gckDEVICE_AddCore+0xbc/0x348 [galcore]
+[  122.052482]  gckGALDEVICE_Construct+0x5d8/0x11d0 [galcore]
+[  122.057996]  gpu_probe+0x5a8/0xb10 [galcore]
+[  122.062256]  platform_drv_probe+0x54/0xb0
+[  122.066255]  really_probe+0xe8/0x4b4
+[  122.069814]  driver_probe_device+0x58/0xc0
+[  122.073893]  device_driver_attach+0xc0/0xd0
+[  122.078059]  __driver_attach+0x84/0x124
+[  122.081878]  bus_for_each_dev+0x70/0xc0
+[  122.085697]  driver_attach+0x24/0x30
+[  122.089257]  bus_add_driver+0x104/0x1ec
+[  122.093076]  driver_register+0x78/0x130
+[  122.096895]  __platform_driver_register+0x4c/0x60
+[  122.101621]  gpu_init+0x60/0x1000 [galcore]
+[  122.105794]  do_one_initcall+0x54/0x1bc
+[  122.109621]  do_init_module+0x54/0x240
+[  122.113360]  load_module+0x1ec8/0x2500
+[  122.117093]  __do_sys_finit_module+0xb8/0xfc
+[  122.121346]  __arm64_sys_finit_module+0x24/0x30
+[  122.125862]  el0_svc_common.constprop.0+0x94/0x1c0
+[  122.130643]  do_el0_svc+0x44/0xb0
+[  122.133942]  el0_svc+0x14/0x20
+[  122.136988]  el0_sync_handler+0x1a4/0x1b0
+[  122.140980]  el0_sync+0x174/0x180
+[  122.144282] Code: 91010108 54ffff4a 8b040108 cb050042 (d50b7428) 
+[  122.150365] ---[ end trace 90fe753ee2a0cd6c ]---
+Segmentation fault
+
